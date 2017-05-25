@@ -1,0 +1,264 @@
+# 这个 viminfo 文件是由 Vim 7.4 所产生。
+# 如果想要自行修改请特别小心！
+
+# 文件被写的时候 ‘encoding’ 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 上个 Search 图案：
+~MSle0~/wrap
+
+# 命令行 历史记录 (从新到旧)：
+:wq
+:e
+:w
+:cs find c init_heap_pages
+:cs add ~/RDXA/cscope.out
+:1292
+:q
+:PluginInstall
+
+# 查找字符串 历史记录 (从新到旧)：
+?/wrap
+?/auto
+?/mouse
+? \<init_heap_pages\>
+?/init_
+?/init
+?/online_page
+?/security_domain_id
+? \<SPT_DOMAIN_XEN\>
+?/spt
+?/free_heap
+? \<assume\>
+?/free_h
+?/free
+
+# 表达式 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+
+# 输入行 历史记录 (从新到旧)：
+
+# 寄存器:
+"0	LINE	0
+	    security_domain_id = get_security_domain_id(pg);
+"1	CHAR	0
+	if has("cscope")
+	              set csprg=/usr/local/bin/cscope
+	              set csto=0
+	              set cst
+	              set nocsverb
+	              " add any database in current directory
+	              if filereadable("cscope.out")
+	                  cs add cscope.out
+	              " else add database pointed to by environment
+	              elseif $CSCOPE_DB != ""
+	                  cs add $CSCOPE_DB
+	              endif
+	              set csverb
+	endif
+"2	LINE	0
+	Plugin '你的插件'
+"3	CHAR	0
+	if(0 && do_print(SPT_DEBUG)){
+	        printk("[SPT_DEBUG] pg=%p,domain=%d, order=%d\n",pg,security_domain_id,order);
+	    
+"4	LINE	0
+	                free_pages += avail[SPT_DOMAIN_XEN][i][zone];
+"5	LINE	0
+	            if ( (node == -1) || (node == i) )
+"6	LINE	0
+	Plugin '你的插件'
+""-	CHAR	0
+	写
+
+# 文件标记:
+'0  56  0  ~/.vimrc
+'1  31  32  ~/.vimrc
+'2  208  29  ~/RDXA/xen/common/DRAM_translate.c
+'3  39  44  ~/.vimrc
+'4  32  12  ~/.vimrc
+'5  23  0  ~/.vimrc
+'6  639  8  ~/RDXA/xen/common/page_alloc.c
+'7  349  9  ~/RDXA/xen/common/page_alloc.c
+'8  349  9  ~/RDXA/xen/common/page_alloc.c
+'9  639  8  ~/RDXA/xen/common/page_alloc.c
+
+# 跳转列表 (从新到旧):
+-'  56  0  ~/.vimrc
+-'  31  32  ~/.vimrc
+-'  17  16  ~/.vimrc
+-'  46  25  ~/.vimrc
+-'  36  4  ~/.vimrc
+-'  73  6  ~/.vimrc
+-'  72  1  ~/.vimrc
+-'  63  19  ~/.vimrc
+-'  62  18  ~/.vimrc
+-'  51  2  ~/.vimrc
+-'  50  2  ~/.vimrc
+-'  44  4  ~/.vimrc
+-'  42  10  ~/.vimrc
+-'  38  4  ~/.vimrc
+-'  26  0  ~/.vimrc
+-'  74  11  ~/.vimrc
+-'  95  0  ~/.vimrc
+-'  208  29  ~/RDXA/xen/common/DRAM_translate.c
+-'  1  0  ~/RDXA/xen/common/DRAM_translate.c
+-'  39  44  ~/.vimrc
+-'  54  1  ~/.vimrc
+-'  32  12  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  23  0  ~/.vimrc
+-'  19  0  ~/.vimrc
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  45  0  ~/.vimrc
+-'  1010  0  ~/RDXA/xen/common/page_alloc.c
+-'  1004  15  ~/RDXA/xen/common/page_alloc.c
+-'  11  7  ~/RDXA/xen/common/page_alloc.c
+-'  10  1  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  58  1  ~/.vimrc
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+-'  349  9  ~/RDXA/xen/common/page_alloc.c
+-'  1018  4  ~/RDXA/xen/common/page_alloc.c
+-'  1016  0  ~/RDXA/xen/common/page_alloc.c
+-'  1010  0  ~/RDXA/xen/common/page_alloc.c
+-'  1004  15  ~/RDXA/xen/common/page_alloc.c
+-'  11  7  ~/RDXA/xen/common/page_alloc.c
+-'  10  1  ~/RDXA/xen/common/page_alloc.c
+-'  5  1  ~/RDXA/xen/common/page_alloc.c
+-'  639  8  ~/RDXA/xen/common/page_alloc.c
+-'  1  0  ~/RDXA/xen/common/page_alloc.c
+
+# 文件内的标记历史记录 (从新到旧):
+
+> ~/.vimrc
+	"	56	0
+	^	31	35
+	.	32	0
+	+	1	0
+	+	41	0
+	+	49	0
+	+	16	0
+	+	41	22
+	+	54	0
+	+	58	0
+	+	41	32
+	+	42	0
+	+	43	12
+	+	44	12
+	+	45	0
+	+	43	13
+	+	67	0
+	+	68	0
+	+	95	0
+	+	73	34
+	+	74	0
+	+	74	0
+	+	74	0
+	+	95	0
+	+	95	0
+	+	75	0
+	+	27	10
+	+	36	12
+	+	37	0
+	+	45	0
+	+	45	0
+	+	46	0
+	+	47	0
+	+	46	0
+	+	17	19
+	+	32	0
+
+> ~/RDXA/xen/common/page_alloc.c
+	"	1845	8
+	^	1824	63
+	.	1824	62
+	+	1147	23
+	+	1148	0
+	+	1150	0
+	+	1155	0
+	+	1159	0
+	+	1413	40
+	+	1415	56
+	+	1415	50
+	+	1421	0
+	+	1415	50
+	+	1416	38
+	+	1416	38
+	+	1421	0
+	+	1418	0
+	+	1417	0
+	+	1417	36
+	+	1418	36
+	+	829	1
+	+	775	1
+	+	775	1
+	+	777	28
+	+	835	42
+	+	835	78
+	+	835	77
+	+	840	72
+	+	889	54
+	+	893	34
+	+	894	27
+	+	776	42
+	+	940	48
+	+	945	47
+	+	981	68
+	+	994	31
+	+	1288	8
+	+	1028	0
+	+	1824	62
+
+> ~/RDXA/xen/include/xen/mm.h
+	"	355	0
+
+> ~/RDXA/xen/common/bitmap.c
+	"	92	3
+
+> ~/RDXA/xen/common/DRAM_translate.c
+	"	208	29
