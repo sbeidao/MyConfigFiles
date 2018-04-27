@@ -10,6 +10,9 @@ set guioptions-=b
 set showtabline=0
 "设置字体"
 set guifont=Monaco:h13         
+"vim 解决中文乱码问题"
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+
 syntax on    "开启语法高亮"
 let g:solarized_termcolors=256    "solarized主题设置在终端下的设置"
 set background=dark        "设置背景色"
@@ -86,9 +89,27 @@ if has("cscope")
        let cscope_file=findfile("cscope.out", ".;")  
        let cscope_pre=matchstr(cscope_file, ".*/")  
        if !empty(cscope_file) && filereadable(cscope_file)  
-           exe "cs add" cscope_file cscope_pre  
+           exe "cs add" cscope_file cscope_pre 
        endif        
      endif  
 endif  
 
+"YouCompleteMe插件中支持C++时会报错找不到ycm_extra_conf.py
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+"设置语法折叠
+set foldenable              " 开始折叠
+set foldmethod=syntax       " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+setlocal foldlevel=1        " 设置折叠层数为
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+set foldclose=all          " 设置为自动关闭折叠                
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"                            " 用空格键来开关折叠
+
+"设置taglist插件
+map <silent> <F9> :TlistToggle<cr>
+let Tlist_Auto_Open = 1 "1代表自动开启taglist。0表示关闭"
+let Tlist_Use_Right_Window = 1 "右侧放置taglist窗口"
+let Tlist_Exit_OnlyWindow = 1 "如果taglist是最后一个窗口，则关闭"

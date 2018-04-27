@@ -4,4 +4,5 @@ My configure files on TMUX, VIM and others
 
 2.there are some hidden directories and files .vim, .vimrc, .tmux.conf  
 
-3.You should first go to https://github.com/VundleVim/Vundle.vim to install vundle before the start of vim
+3.Currently the .vim directory contain some plugins of 2018/04/27, maybe they should be updated
+
