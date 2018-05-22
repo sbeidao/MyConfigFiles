@@ -43,7 +43,7 @@ set cursorline        "突出显示当前行"
 set cursorcolumn        "突出显示当前列"
 "递归从下往上找tags文件
 let Tlist_Auto_Open=1
-set tags=tags;
+set tags+=~/.vim/systags;
 set autochdir
 set autoindent " 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
 set linebreak " 整词换行
@@ -110,6 +110,6 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 "设置taglist插件
 map <silent> <F9> :TlistToggle<cr>
-let Tlist_Auto_Open = 1 "1代表自动开启taglist。0表示关闭"
+let Tlist_Auto_Open = 0 "1代表自动开启taglist。0表示关闭"
 let Tlist_Use_Right_Window = 1 "右侧放置taglist窗口"
 let Tlist_Exit_OnlyWindow = 1 "如果taglist是最后一个窗口，则关闭"
