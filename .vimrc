@@ -97,6 +97,10 @@ endif
 "YouCompleteMe插件中支持C++时会报错找不到ycm_extra_conf.py
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+"Youcompleteme 插件开启debug模式
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
 "设置语法折叠
 set foldenable              " 开始折叠
 set foldmethod=syntax       " 设置语法折叠
