@@ -11,7 +11,8 @@ set showtabline=0
 "设置字体"
 set guifont=Monaco:h13
 "vim 解决中文乱码问题"
-set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+"set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
 syntax on    "开启语法高亮"
 "let g:solarized_termcolors=256    "solarized主题设置在终端下的设置"
@@ -23,6 +24,9 @@ set fileformat=unix    "设置以unix的格式保存文件"
 set cindent        "设置C样式的缩进格式"
 set tabstop=8    "设置table长度"
 set shiftwidth=8        "同上"
+set listchars=tab:>-,trail:-,extends:#,nbsp:- "设置tab可见格式
+set list  "设置tab可见"
+
 set showmatch    "显示匹配的括号"
 set scrolloff=5        "距离顶部和底部5行"
 set laststatus=2    "命令行为两行"
@@ -42,8 +46,9 @@ set smartcase " 如果搜索模式包含大写字符，不使用 'ignorecase' �
 set autowrite " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
 set cursorline        "突出显示当前行"
 set cursorcolumn        "突出显示当前列"
+"设置自动cd到vim打开的文件所在位置
+"set autochdir
 "递归从下往上找tags文件
-set autochdir
 set tags=tags;
 "需要先去生成一个systags
 set tags+=~/.vim/systags;
@@ -109,8 +114,13 @@ if has("cscope")
 	endif
 endif
 
+
+
 "YouCompleteMe插件中要设置extra config，来自于YCM-Generator
 "let g:ycm_global_ycm_extra_conf = '~/Documents/linux-4.19.2/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/shipt/.vim/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
 
 "Youcompleteme 插件开启debug模式
 let g:ycm_server_keep_logfiles = 1
@@ -134,9 +144,19 @@ let Tlist_Use_Right_Window = 1 "右侧放置taglist窗口"
 let Tlist_Exit_OnlyWindow = 1 "如果taglist是最后一个窗口，则关闭"
 
 "astyle自动格式化
-au BufWrite * :Autoformat
+"au BufWrite * :Autoformat
 let g:autoformat_remove_trailing_spaces = 1
+noremap <F3> :Autoformat<CR>
 
-let g:formatdef_linux_8 = '"astyle --style=linux -s8"'
+let g:formatdef_linux_8 = '"astyle --style=linux -t8 -H -p -U"'
 let g:formatters_cpp = ['linux_8']
 let g:formatters_c = ['linux_8']
+
+"nerdtree setting
+"设置快捷键 F2 
+map <F2> :NERDTreeToggle<CR>
+"自动关闭
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+"打开文件夹时自动打开nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
